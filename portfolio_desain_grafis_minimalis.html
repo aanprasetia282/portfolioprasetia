@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aan Prasetia | Jasa Desain Grafis Kreatif & Profesional</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        burgundy: '#810B38',  
+                        cream: '#F1E2D1',     
+                        beige: '#DCC3AA',     
+                        mahogany: '#541A1A',  
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F1E2D1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #DCC3AA;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #810B38;
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-cream text-mahogany font-sans antialiased overflow-x-hidden selection:bg-burgundy selection:text-white">
+
+    <!-- NAVBAR -->
+    <header class="fixed top-0 left-0 w-full z-50 transition-all duration-300 bg-[#F1E2D1]/85 backdrop-blur-md border-b border-beige/30" id="main-header">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <!-- Logo Aan Prasetia -->
+            <a href="#home" class="flex items-center space-x-3 group">
+                <div class="w-10 h-10 rounded-lg overflow-hidden border border-beige/40 bg-white flex items-center justify-center shadow-sm transition-transform duration-300 group-hover:scale-105">
+                    <img src="logo.png" alt="Logo Aan Prasetia" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/100x100/810B38/FFFFFF?text=A'">
+                </div>
+                <span class="text-lg font-bold tracking-tight text-mahogany group-hover:text-burgundy transition-colors duration-300">
+                    Aan<span class="bg-gradient-to-r from-burgundy to-mahogany bg-clip-text text-transparent">Prasetia</span>
+                </span>
+            </a>
+
+            <!-- Desktop Nav (4 Menu Utama) -->
+            <nav class="hidden md:flex items-center space-x-10">
+                <a href="#home" class="text-sm font-semibold text-mahogany hover:text-burgundy transition-colors duration-200">Home</a>
+                <a href="#about" class="text-sm font-semibold text-mahogany/70 hover:text-burgundy transition-colors duration-200">About</a>
+                <a href="#galeri" class="text-sm font-semibold text-mahogany/70 hover:text-burgundy transition-colors duration-200">Galeri Karya</a>
+                <a href="#kontak" class="text-sm font-semibold text-mahogany/70 hover:text-burgundy transition-colors duration-200">Kontak</a>
+            </nav>
+
+            <!-- CTA Header -->
+            <div class="hidden md:block">
+                <a href="#kontak" class="inline-flex items-center justify-center px-5 py-2 text-xs font-bold text-cream bg-mahogany hover:bg-burgundy rounded-full transition-all duration-300 shadow-sm">
+                    Mulai Proyek
+                </a>
+            </div>
+
+            <!-- Mobile Toggle -->
+            <button class="md:hidden text-mahogany hover:text-burgundy focus:outline-none" id="menu-btn" aria-label="Toggle Menu">
+                <i data-lucide="menu" class="w-6 h-6" id="menu-icon"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-cream border-b border-beige/40" id="mobile-menu">
+            <div class="px-6 py-6 flex flex-col space-y-4">
+                <a href="#home" class="text-base font-semibold py-2 border-b border-beige/20 hover:text-burgundy transition-colors">Home</a>
+                <a href="#about" class="text-base font-semibold py-2 border-b border-beige/20 hover:text-burgundy transition-colors">About</a>
+                <a href="#galeri" class="text-base font-semibold py-2 border-b border-beige/20 hover:text-burgundy transition-colors">Galeri Karya</a>
+                <a href="#kontak" class="text-base font-semibold py-2 hover:text-burgundy transition-colors">Kontak</a>
+                <a href="#kontak" class="w-full text-center bg-mahogany text-cream py-3 rounded-xl font-bold text-sm hover:bg-burgundy transition-colors">
+                    Hubungi Saya
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="relative min-h-screen flex items-center pt-24 pb-12 overflow-hidden bg-cream">
+        <!-- Soft background grids for minimalist look -->
+        <div class="absolute inset-0 opacity-[0.06] bg-[linear-gradient(to_right,#541A1A_1px,transparent_1px),linear-gradient(to_bottom,#541A1A_1px,transparent_1px)] bg-[size:40px_40px] pointer-events-none"></div>
+        <div class="absolute top-1/3 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-gradient-to-tr from-burgundy/10 to-beige/15 rounded-full blur-[120px] pointer-events-none"></div>
+        
+        <div class="max-w-5xl mx-auto px-6 grid md:grid-cols-12 gap-12 items-center relative z-10 w-full">
+            <!-- Left Text -->
+            <div class="md:col-span-7 flex flex-col space-y-6 text-left">
+                <div class="inline-flex items-center space-x-2 bg-burgundy/10 text-burgundy px-4 py-1.5 rounded-full text-xs font-bold tracking-wider self-start border border-burgundy/20">
+                    <span class="w-2 h-2 rounded-full bg-burgundy animate-ping"></span>
+                    <span>Freelance Graphic Designer</span>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-mahogany">
+                    Jasa Desain Grafis<br>
+                    <span class="bg-gradient-to-r from-burgundy via-[#a01248] to-mahogany bg-clip-text text-transparent">
+                        Kreatif & Profesional
+                    </span>
+                </h1>
+                
+                <p class="text-base sm:text-lg text-mahogany/80 max-w-lg leading-relaxed font-light">
+                    Membantu bisnis dan personal branding tampil lebih menarik melalui desain visual yang modern dan berkualitas.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-4">
+                    <a href="#galeri" class="flex items-center justify-center gap-2 bg-mahogany hover:bg-burgundy text-cream font-bold px-8 py-4 rounded-xl shadow-lg shadow-mahogany/10 hover:shadow-burgundy/20 transition-all duration-300">
+                        <span>Lihat Karya</span>
+                        <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    </a>
+                    <a href="#kontak" class="flex items-center justify-center gap-2 bg-white/70 hover:bg-white text-mahogany font-bold px-8 py-4 rounded-xl border border-beige hover:border-burgundy transition-all duration-300">
+                        <span>Konsultasi Gratis</span>
+                        <i data-lucide="message-square" class="w-4 h-4 text-mahogany/60"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Showcase (Foto Aan Prasetia di Banner) -->
+            <div class="md:col-span-5 flex justify-center">
+                <div class="relative w-72 h-[380px] sm:w-80 sm:h-[440px] rounded-3xl bg-white border border-beige p-3 shadow-xl hover:shadow-2xl transition-all duration-500 hover:-translate-y-1">
+                    <div class="absolute -top-3 -right-3 w-16 h-16 bg-gradient-to-tr from-burgundy to-mahogany rounded-2xl flex items-center justify-center shadow-lg transform rotate-12 z-20">
+                        <i data-lucide="palette" class="w-6 h-6 text-white"></i>
+                    </div>
+                    <div class="w-full h-full bg-mahogany rounded-2xl overflow-hidden relative group">
+                        <!-- Foto utama di banner -->
+                        <img src="profil.png" alt="Aan Prasetia" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/500x600/810B38/FFFFFF?text=Aan+Prasetia'">
+                        
+                        <!-- Floating minimal label inside the image -->
+                        <div class="absolute bottom-4 left-4 right-4 bg-cream/90 backdrop-blur-md p-4 rounded-xl border border-beige/40 flex justify-between items-center shadow-lg">
+                            <div>
+                                <span class="text-[9px] font-bold text-burgundy uppercase tracking-widest block">Senior Designer</span>
+                                <h4 class="font-bold text-mahogany text-xs">Aan Prasetia Studio</h4>
+                            </div>
+                            <span class="flex h-2.5 w-2.5 relative">
+                                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="py-24 bg-white/40 border-t border-beige/50 relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12 items-center">
+                <!-- Left: Profile Photo (Using Adobe Express - file.jpg) -->
+                <div class="lg:col-span-5 reveal relative">
+                    <div class="rounded-2xl overflow-hidden bg-white border border-beige p-3 shadow-sm">
+                        <div class="bg-cream/50 h-[400px] w-full rounded-xl overflow-hidden relative group flex items-center justify-center">
+                            <!-- Real Image Source with local file name and proper error placeholder -->
+                            <img src="profil.png" alt="Aan Prasetia" class="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/500x600/810B38/FFFFFF?text=Aan+Prasetia'">
+                            
+                            <!-- Minimal Label Overlay -->
+                            <div class="absolute bottom-4 left-4 right-4 bg-cream/90 backdrop-blur-sm p-4 rounded-lg border border-beige/40 flex justify-between items-center">
+                                <div>
+                                    <h4 class="font-bold text-mahogany text-sm">Aan Prasetia</h4>
+                                    <p class="text-xs text-mahogany/70">Graphic Designer</p>
+                                </div>
+                                <div class="w-8 h-8 rounded-full bg-mahogany text-white flex items-center justify-center">
+                                    <i data-lucide="check" class="w-4 h-4"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Profile Info -->
+                <div class="lg:col-span-7 flex flex-col justify-center space-y-6 reveal">
+                    <div class="flex items-center space-x-3">
+                        <span class="h-0.5 w-8 bg-burgundy"></span>
+                        <span class="text-xs font-bold text-burgundy uppercase tracking-widest">Tentang Saya</span>
+                    </div>
+                    
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-mahogany leading-tight">
+                        Mewujudkan Konsep Merek Anda Lewat <span class="bg-gradient-to-r from-burgundy to-mahogany bg-clip-text text-transparent">Desain Estetik</span> & Fungsional.
+                    </h2>
+                    
+                    <p class="text-mahogany/80 leading-relaxed font-light">
+                        Halo! Saya <strong class="text-mahogany font-semibold">Aan Prasetia</strong>. Saya berfokus pada pembuatan solusi desain visual modern yang tidak hanya cantik dipandang, tetapi juga membantu bisnis Anda berkomunikasi secara efektif dengan audiens sasaran Anda.
+                    </p>
+                    
+                    <p class="text-mahogany/80 leading-relaxed font-light">
+                        Dengan keahlian di berbagai perangkat desain standar industri, saya menawarkan layanan komprehensif mulai dari konsep logo primer hingga materi publikasi digital dan cetak.
+                    </p>
+
+                    <!-- Skills & Services -->
+                    <div class="grid grid-cols-2 gap-4 pt-4 border-t border-beige">
+                        <div class="flex items-center space-x-2.5">
+                            <span class="w-2 h-2 rounded-full bg-burgundy"></span>
+                            <span class="text-sm font-semibold text-mahogany/95">Desain Logo & Branding</span>
+                        </div>
+                        <div class="flex items-center space-x-2.5">
+                            <span class="w-2 h-2 rounded-full bg-burgundy"></span>
+                            <span class="text-sm font-semibold text-mahogany/95">Konten Media Sosial</span>
+                        </div>
+                        <div class="flex items-center space-x-2.5">
+                            <span class="w-2 h-2 rounded-full bg-mahogany"></span>
+                            <span class="text-sm font-semibold text-mahogany/95">Poster & Banner Promosi</span>
+                        </div>
+                        <div class="flex items-center space-x-2.5">
+                            <span class="w-2 h-2 rounded-full bg-mahogany"></span>
+                            <span class="text-sm font-semibold text-mahogany/95">Kemasan & Label Produk</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERI KARYA SECTION -->
+    <section id="galeri" class="py-24 bg-white relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="text-center max-w-xl mx-auto mb-16 reveal">
+                <div class="flex items-center justify-center space-x-3 mb-2">
+                    <span class="h-0.5 w-8 bg-burgundy"></span>
+                    <span class="text-xs font-bold text-burgundy uppercase tracking-widest">Karya Seni</span>
+                    <span class="h-0.5 w-8 bg-burgundy"></span>
+                </div>
+                <h2 class="text-3xl font-extrabold text-mahogany mb-4">Galeri Portofolio</h2>
+                <p class="text-mahogany/70 font-light">Kumpulan hasil pengerjaan desain terbaik untuk klien kami dari berbagai sektor industri.</p>
+            </div>
+
+            <!-- PORTFOLIO GRID (Siap pakai dengan file gambar Anda) -->
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="reveal group bg-cream/20 rounded-xl overflow-hidden border border-beige/40 hover:border-burgundy/30 shadow-sm transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gradient-to-tr from-burgundy/10 to-beige/20">
+                        <!-- Ganti "karya1.jpg" dengan nama file gambar desain Anda -->
+                        <img src="https://www.image2url.com/r2/default/images/1780293871355-ede23197-9638-45b2-91f7-a6e5ccea6e8b.png" alt="Apex Corporate Logo" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x600/810B38/FFFFFF?text=Apex+Corporate+Logo'">
+                        
+                        <!-- Hover info overlay -->
+                        <div class="absolute inset-0 bg-mahogany/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-xs font-semibold text-beige uppercase tracking-wider mb-1">Branding</span>
+                            <h3 class="text-base font-bold text-cream">Baju Jersey</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-beige/30 bg-white">
+                        <span class="text-xs font-bold text-burgundy tracking-widest uppercase">Baju Jersey</span>
+                        <h4 class="text-base font-bold text-mahogany mt-1">Apex Corporate Logo</h4>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="reveal group bg-cream/20 rounded-xl overflow-hidden border border-beige/40 hover:border-burgundy/30 shadow-sm transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gradient-to-tr from-burgundy/15 to-beige/30">
+                        <!-- Ganti "karya2.jpg" dengan nama file gambar desain Anda -->
+                        <img src="https://www.image2url.com/r2/default/images/1780294570833-21c15d1d-b339-465b-893d-ebd96e4ffeab.png" alt="Instagram Post Campaign" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x600/541A1A/FFFFFF?text=Instagram+Campaign'">
+                        
+                        <div class="absolute inset-0 bg-mahogany/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-xs font-semibold text-beige uppercase tracking-wider mb-1">Media Sosial</span>
+                            <h3 class="text-base font-bold text-cream">Social Campaign - Bloom</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-beige/30 bg-white">
+                        <span class="text-xs font-bold text-burgundy tracking-widest uppercase">Media Sosial</span>
+                        <h4 class="text-base font-bold text-mahogany mt-1">Instagram Post Campaign</h4>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="reveal group bg-cream/20 rounded-xl overflow-hidden border border-beige/40 hover:border-burgundy/30 shadow-sm transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gradient-to-tr from-burgundy/10 to-beige/20">
+                        <!-- Ganti "karya3.jpg" dengan nama file gambar desain Anda -->
+                        <img src="https://www.image2url.com/r2/default/images/1780294909396-bb67bc71-078f-4044-b6b9-1286cfe85e2b.png" alt="Creative Talk Event Poster" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x600/810B38/FFFFFF?text=Event+Poster'">
+                        
+                        <div class="absolute inset-0 bg-mahogany/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-xs font-semibold text-beige uppercase tracking-wider mb-1">Poster</span>
+                            <h3 class="text-base font-bold text-cream">Event Poster - Creative Talk</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-beige/30 bg-white">
+                        <span class="text-xs font-bold text-burgundy tracking-widest uppercase">Poster & Banner</span>
+                        <h4 class="text-base font-bold text-mahogany mt-1">Creative Talk Event Poster</h4>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="reveal group bg-cream/20 rounded-xl overflow-hidden border border-beige/40 hover:border-burgundy/30 shadow-sm transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gradient-to-tr from-burgundy/15 to-beige/35">
+                        <!-- Ganti "karya4.jpg" dengan nama file gambar desain Anda -->
+                        <img src="https://www.image2url.com/r2/default/images/1780295305006-8a33d797-43b6-4fcc-9f90-045030697685.png" alt="Juice Eco Packaging" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x600/541A1A/FFFFFF?text=Eco+Packaging'">
+                        
+                        <div class="absolute inset-0 bg-mahogany/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-xs font-semibold text-beige uppercase tracking-wider mb-1">Kemasan</span>
+                            <h3 class="text-base font-bold text-cream">Organic Juice Bottle Box</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-beige/30 bg-white">
+                        <span class="text-xs font-bold text-burgundy tracking-widest uppercase">Kemasan Produk</span>
+                        <h4 class="text-base font-bold text-mahogany mt-1">Juice Eco Packaging</h4>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="reveal group bg-cream/20 rounded-xl overflow-hidden border border-beige/40 hover:border-burgundy/30 shadow-sm transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gradient-to-tr from-burgundy/10 to-beige/20">
+                        <!-- Ganti "karya5.jpg" dengan nama file gambar desain Anda -->
+                        <img src="https://www.image2url.com/r2/default/images/1780295494683-97ee9239-e778-41c2-a29d-7d5e35d50709.png" alt="Nusantara Coffee Branding" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x600/810B38/FFFFFF?text=Coffee+Stationery'">
+                        
+                        <div class="absolute inset-0 bg-mahogany/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-xs font-semibold text-beige uppercase tracking-wider mb-1">logo</span>
+                            <h3 class="text-base font-bold text-cream">Coffee Shop Stationery</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-beige/30 bg-white">
+                        <span class="text-xs font-bold text-burgundy tracking-widest uppercase">Logo</span>
+                        <h4 class="text-base font-bold text-mahogany mt-1">Timur logo</h4>
+                    </div>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="reveal group bg-cream/20 rounded-xl overflow-hidden border border-beige/40 hover:border-burgundy/30 shadow-sm transition-all duration-300">
+                    <div class="relative overflow-hidden aspect-square bg-gradient-to-tr from-burgundy/15 to-beige/30">
+                        <!-- Ganti "karya6.jpg" dengan nama file gambar desain Anda -->
+                        <img src="https://www.image2url.com/r2/default/images/1780295683501-5537b45e-9738-4a24-96d1-4c50f7c5cd6f.png" alt="Microblog Tips Bisnis" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" onerror="this.src='https://placehold.co/600x600/541A1A/FFFFFF?text=Microblog+Carousel'">
+                        
+                        <div class="absolute inset-0 bg-mahogany/90 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <span class="text-xs font-semibold text-beige uppercase tracking-wider mb-1">Sosial Media</span>
+                            <h3 class="text-base font-bold text-cream">Microblog Carousel Post</h3>
+                        </div>
+                    </div>
+                    <div class="p-5 border-t border-beige/30 bg-white">
+                        <span class="text-xs font-bold text-burgundy tracking-widest uppercase">Media Sosial</span>
+                        <h4 class="text-base font-bold text-mahogany mt-1">Microblog Tips Bisnis</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KONTAK SECTION -->
+    <section id="kontak" class="py-24 bg-cream border-t border-beige relative">
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="grid lg:grid-cols-12 gap-12">
+                <!-- Left: Contact info -->
+                <div class="lg:col-span-5 flex flex-col justify-center space-y-8 reveal">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-2">
+                            <span class="h-0.5 w-8 bg-burgundy"></span>
+                            <span class="text-xs font-bold text-burgundy uppercase tracking-widest">Ayo Mulai</span>
+                        </div>
+                        <h2 class="text-3xl font-extrabold text-mahogany">Hubungi Saya Sekarang</h2>
+                        <p class="text-mahogany/70 mt-4 leading-relaxed font-light">
+                            Siap meluncurkan karya desain keren Anda berikutnya? Hubungi saya kapan saja untuk mendiskusikan penawaran harga atau konsultasi awal.
+                        </p>
+                    </div>
+
+                    <!-- Cards -->
+                    <div class="space-y-4">
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/6281234567890" target="_blank" class="flex items-center space-x-4 bg-white/60 hover:bg-white p-4 rounded-xl border border-beige hover:border-burgundy/30 transition-all group">
+                            <div class="w-10 h-10 rounded-lg bg-burgundy/10 text-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-white transition-all">
+                                <i data-lucide="phone" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] text-mahogany/60 uppercase font-bold tracking-wider">WhatsApp</h4>
+                                <p class="text-sm font-bold text-mahogany">+62 813 2978 5838</p>
+                            </div>
+                        </a>
+
+                        <!-- Email -->
+                        <a href="mailto:aan51454@gmail.com" class="flex items-center space-x-4 bg-white/60 hover:bg-white p-4 rounded-xl border border-beige hover:border-burgundy/30 transition-all group">
+                            <div class="w-10 h-10 rounded-lg bg-burgundy/10 text-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-white transition-all">
+                                <i data-lucide="mail" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] text-mahogany/60 uppercase font-bold tracking-wider">Email Kerja</h4>
+                                <p class="text-sm font-bold text-mahogany">aan51454@gmail.com</p>
+                            </div>
+                        </a>
+
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/aanprasetia" target="_blank" class="flex items-center space-x-4 bg-white/60 hover:bg-white p-4 rounded-xl border border-beige hover:border-burgundy/30 transition-all group">
+                            <div class="w-10 h-10 rounded-lg bg-burgundy/10 text-burgundy flex items-center justify-center group-hover:bg-burgundy group-hover:text-white transition-all">
+                                <i data-lucide="instagram" class="w-5 h-5"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-[10px] text-mahogany/60 uppercase font-bold tracking-wider">Instagram</h4>
+                                <p class="text-sm font-bold text-mahogany">@aannprasetia</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Simple Form -->
+                <div class="lg:col-span-7 reveal">
+                    <div class="bg-white border border-beige p-8 rounded-2xl shadow-sm">
+                        <div id="contact-success" class="hidden mb-6 bg-burgundy/10 border border-burgundy/20 text-burgundy p-4 rounded-xl flex items-center gap-3">
+                            <i data-lucide="check-circle" class="w-5 h-5"></i>
+                            <span class="text-xs font-bold">Pesan Anda berhasil terkirim! Aan akan segera menghubungi Anda.</span>
+                        </div>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="name" class="block text-[11px] font-bold text-mahogany/60 uppercase tracking-wider mb-2">Nama Lengkap</label>
+                                    <input type="text" id="name" required class="w-full bg-cream/20 border border-beige rounded-xl px-4 py-3 text-sm text-mahogany focus:border-burgundy focus:bg-white focus:outline-none transition-all" placeholder="John Doe">
+                                </div>
+                                <div>
+                                    <label for="email" class="block text-[11px] font-bold text-mahogany/60 uppercase tracking-wider mb-2">Alamat Email</label>
+                                    <input type="email" id="email" required class="w-full bg-cream/20 border border-beige rounded-xl px-4 py-3 text-sm text-mahogany focus:border-burgundy focus:bg-white focus:outline-none transition-all" placeholder="john@example.com">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-[11px] font-bold text-mahogany/60 uppercase tracking-wider mb-2">Pesan Anda</label>
+                                <textarea id="message" rows="4" required class="w-full bg-cream/20 border border-beige rounded-xl px-4 py-3 text-sm text-mahogany focus:border-burgundy focus:bg-white focus:outline-none transition-all resize-none" placeholder="Tulis rincian desain yang Anda butuhkan di sini..."></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full bg-mahogany hover:bg-burgundy text-cream font-bold py-4 rounded-xl shadow-lg transition-colors flex items-center justify-center gap-2">
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                                <span>Kirim Pesan</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-white border-t border-beige/60 py-12">
+        <div class="max-w-5xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
+            <!-- Brand Logo -->
+            <a href="#home" class="flex items-center space-x-3">
+                <div class="w-8 h-8 rounded-lg overflow-hidden border border-beige/40 bg-white flex items-center justify-center">
+                    <img src="logo.png" alt="Logo Aan Prasetia" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/80x80/810B38/FFFFFF?text=A'">
+                </div>
+                <span class="text-sm font-bold tracking-tight text-mahogany">
+                    Aan<span class="text-burgundy">Prasetia</span>
+                </span>
+            </a>
+            
+            <p class="text-[11px] text-mahogany/60">
+                &copy; 2026 Aan Prasetia. Hak Cipta Dilindungi. Web Pribadi.
+            </p>
+
+            <a href="#home" class="text-xs font-semibold text-mahogany/60 hover:text-burgundy transition-colors flex items-center gap-1">
+                Kembali ke Atas <i data-lucide="chevrons-up" class="w-4 h-4"></i>
+            </a>
+        </div>
+    </footer>
+
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/6281234567890?text=Halo%20Aan%20Prasetia,%20saya%20tertarik%20dengan%20jasa%20desain%20grafis%20Anda." target="_blank" class="fixed bottom-6 right-6 z-50 bg-[#25D366] hover:bg-[#20ba5a] text-white p-4 rounded-full shadow-2xl hover:scale-110 active:scale-95 transition-all flex items-center justify-center group" aria-label="Chat WhatsApp">
+        <svg class="w-6 h-6 fill-white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946C.06 5.348 5.397.01 12.008.01c3.202.001 6.212 1.246 8.477 3.513 2.262 2.268 3.507 5.28 3.505 8.484-.004 6.657-5.34 11.997-11.953 11.997-2.005-.001-3.973-.502-5.724-1.457L0 24zm6.59-4.846c1.6.95 3.188 1.449 4.825 1.451 5.436 0 9.86-4.37 9.864-9.799.002-2.63-1.023-5.101-2.885-6.968C16.628 1.971 14.151 1.25 11.5 1.25c-5.45 0-9.877 4.375-9.88 9.803-.001 1.684.455 3.324 1.321 4.793l-.974 3.559 3.68-.952zm11.91-6.19c-.31-.154-1.829-.894-2.112-.996-.282-.103-.487-.154-.692.154-.205.308-.795.996-.974 1.199-.18.204-.359.227-.668.073-.309-.155-1.306-.477-2.487-1.522-.92-.814-1.541-1.82-1.72-2.126-.18-.309-.019-.475.136-.629.14-.139.31-.359.463-.538.154-.18.205-.308.308-.513.103-.205.051-.385-.026-.538-.077-.154-.692-1.65-.948-2.257-.25-.597-.501-.518-.692-.527-.18-.01-.385-.01-.59-.01-.205 0-.538.076-.82.384-.282.308-1.077 1.051-1.077 2.564 0 1.513 1.102 2.974 1.256 3.18.154.204 2.17 3.284 5.257 4.603.734.314 1.307.502 1.753.644.737.232 1.41.199 1.942.12.593-.088 1.829-.74 2.086-1.455.256-.717.256-1.332.18-1.455-.077-.123-.282-.205-.59-.36z"/>
+        </svg>
+        <span class="max-w-0 overflow-hidden group-hover:max-w-xs group-hover:ml-2 transition-all duration-300 text-xs font-semibold whitespace-nowrap text-white">
+            Tanya Aan
+        </span>
+    </a>
+
+    
+    <script>
+        // Init Icons
+        lucide.createIcons();
+
+        // Sticky header styling
+        const header = document.getElementById('main-header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 40) {
+                header.classList.add('shadow-md', 'py-3', 'bg-[#F1E2D1]/95');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.remove('shadow-md', 'py-3', 'bg-[#F1E2D1]/95');
+                header.classList.add('py-4');
+            }
+        });
+
+        // Hamburger Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+
+        menuBtn.addEventListener('click', () => {
+            const isHidden = mobileMenu.classList.contains('hidden');
+            if (isHidden) {
+                mobileMenu.classList.remove('hidden');
+                menuIcon.setAttribute('data-lucide', 'x');
+            } else {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+            }
+            lucide.createIcons();
+        });
+
+        // Close Mobile Menu on navigation
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.setAttribute('data-lucide', 'menu');
+                lucide.createIcons();
+            });
+        });
+
+        // Active Navbar Link Indicator on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= (sectionTop - 150)) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-burgundy', 'font-bold');
+                link.classList.add('text-mahogany/70');
+                if (link.getAttribute('href') === `#${current}`) {
+                    link.classList.remove('text-mahogany/70');
+                    link.classList.add('text-burgundy', 'font-bold');
+                }
+            });
+        });
+
+        // Form Submission Interaction
+        const contactForm = document.getElementById('contact-form');
+        const successMessage = document.getElementById('contact-success');
+
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            successMessage.classList.remove('hidden');
+            contactForm.reset();
+            
+            setTimeout(() => {
+                successMessage.classList.add('hidden');
+            }, 6000);
+
+            successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        });
+
+        // Simple Smooth Reveal on Scroll
+        const reveals = document.querySelectorAll('.reveal');
+        function revealOnScroll() {
+            for (let i = 0; i < reveals.length; i++) {
+                const windowHeight = window.innerHeight;
+                const elementTop = reveals[i].getBoundingClientRect().top;
+                const elementVisible = 80;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add('active');
+                }
+            }
+        }
+        window.addEventListener('scroll', revealOnScroll);
+        revealOnScroll(); // Initial Check
+    </script>
+</body>
+</html>
